@@ -21,7 +21,10 @@ constexpr int comp(int x)
 int main(int argc, char *argv[])
 {
         int i = 4;
+        const j = 4;
         constexpr int v = comp(3);
+        constexpr int v = comp(j);
+
         //constexpr int z = comp(i); //bad
         return 0;
 }
