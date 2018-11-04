@@ -4,27 +4,21 @@
 #
 #   Author        : IfQuant
 #   Email         : ifquant@163.com
-#   File Name     : constexpr.cc
-#   Last Modified : 2018-11-04 11:45
+#   File Name     : move.cc
+#   Last Modified : 2018-11-04 16:44
 #   Describe      :
 #
 # ====================================================*/
 
 #include <iostream>
+#include <string>
 using namespace std;
-
-
-constexpr int comp(int x)
-{
-        return x*x;
-}
 int main(int argc, char *argv[])
 {
-        int i = 4;
-        const int j = 4;
-        constexpr int v = comp(3);
-        constexpr int k = comp(j);
-
-        //constexpr int z = comp(i); //bad
+        while(true) {
+                string *s1 =new string("dddd");
+                string s2 = std::move(*s1);  //memleak
+                // delete s1; must delete,or memleakl
+        }
         return 0;
 }

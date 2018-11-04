@@ -4,8 +4,8 @@
 #
 #   Author        : IfQuant
 #   Email         : ifquant@163.com
-#   File Name     : constexpr.cc
-#   Last Modified : 2018-11-04 11:45
+#   File Name     : extern.cc
+#   Last Modified : 2018-11-04 16:06
 #   Describe      :
 #
 # ====================================================*/
@@ -14,17 +14,12 @@
 using namespace std;
 
 
-constexpr int comp(int x)
-{
-        return x*x;
-}
 int main(int argc, char *argv[])
 {
-        int i = 4;
-        const int j = 4;
-        constexpr int v = comp(3);
-        constexpr int k = comp(j);
+    //extern const char x2 = 'a';
+    const char x1 = 'b';
 
-        //constexpr int z = comp(i); //bad
-        return 0;
+    //extern constexpr int x3 = 1 + 1;
+    constexpr int x4 = 1 + 1;
+    return 0;
 }
