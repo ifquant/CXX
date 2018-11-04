@@ -25,8 +25,11 @@ vector<int>  ff() {
 }
 
 vector<int>&  fff() {  //bad code 
+        //vector<int> *i =new vector<int> {1,2,3};
+        //return *i;
         vector<int> i = {1,2,3};
         return i;
+
 }
 
 
