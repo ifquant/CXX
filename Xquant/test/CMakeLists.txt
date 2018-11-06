@@ -23,8 +23,13 @@ cmake_minimum_required (VERSION 2.8)
 project (ifqtest)
 
 # some 3rd-party/customed include/link path
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -export-dynamic")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations -std=c++17")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+
+
 INCLUDE_DIRECTORIES(
-${CMAKE_SOURCE_DIR}/../../Third/ 
+${CMAKE_SOURCE_DIR}/../../Thirds/ 
 ${CMAKE_SOURCE_DIR}/../src/ 
 )
 
@@ -32,6 +37,7 @@ LINK_DIRECTORIES(
 ${CMAKE_SOURCE_DIR}/ThirdParty/
 ${CMAKE_SOURCE_DIR}/build/
 )
+
 
 
 # add external libraries

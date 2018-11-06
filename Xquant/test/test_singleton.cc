@@ -10,13 +10,29 @@
 #
 # ====================================================*/
 
-#include <iostream>
+// 010-TestCase.cpp
+
+// Let Catch provide main():
+#define CATCH_CONFIG_MAIN
+
+#include <catch.hpp>
+
+
 #include "xquant/common.h"
+#include <iostream>
 using namespace std;
+using namespace xquant;
+
+class Test : public Singleton<Test> {
+  public:
+    int test() {return 1;}
+};
+
+class AccountManager : public Singleton<AccountManager> {
+};
 
 
-int main(int argc, char *argv)
-{
-  std::cout << " test_singleton" ;
-  return 0;
+TEST_CASE( "Factorial of 0 is 1 (fail)", "[single-file]" ) {
+    REQUIRE( Test::Instance().test() == 1 );
+    REQUIRE( 2 == 2 );
 }
