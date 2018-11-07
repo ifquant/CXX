@@ -21,6 +21,7 @@
 cmake_minimum_required (VERSION 2.8)
 
 project (ifqtest)
+include(${CMAKE_SOURCE_DIR}/../cmake/find_all.cmake)
 
 # some 3rd-party/customed include/link path
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -export-dynamic")
@@ -36,12 +37,17 @@ ${CMAKE_SOURCE_DIR}/../src/
 LINK_DIRECTORIES(
 ${CMAKE_SOURCE_DIR}/ThirdParty/
 ${CMAKE_SOURCE_DIR}/build/
+${LOG4CXX_LIBRARY_PATH}
+${QUICKFIX_LIBRARY_PATH}
+${PYTHON_LIBRARY_PATH}
+${SOCI_CORE_LIBRARY_PATH}
+${SOCI_POSTGRES_LIBRARY_PATH}
+${TBB_LIBRARY_PATH}
 )
 
 
-
 # add external libraries
-set (EXTRA_LIBS ${EXTRA_LIBS} pthread)
+set (EXTRA_LIBS ${EXTRA_LIBS} dl ${Boost_LIBRARIES} crypto pthread)
 
 
 aux_source_directory (. SRC_LIST)
@@ -105,8 +111,5 @@ foreach ( i RANGE 1 ${TARGET_NUM})
 endforeach (i)
 
 # do sth more, like add more tests...#
-
-
-
 
 
