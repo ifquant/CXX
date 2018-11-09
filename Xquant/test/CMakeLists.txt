@@ -1,21 +1,7 @@
 #set(IFQCONF_SOURCE_FILES
 #    ifqconf_test.cpp)
-#set(MONGO_SOURCE_FILES
-#    mongo_test.cpp
-#    )
-#set(IDATA_SOURCE_FILES
-#    idata_test.cpp
-#    )
-
-
 
 #ADD_EXECUTABLE(test_ifqconf ${IFQCONF_SOURCE_FILES})
-#ADD_EXECUTABLE(test_mongo ${MONGO_SOURCE_FILES})
-#ADD_EXECUTABLE(test_idata ${IDATA_SOURCE_FILES})
-
-#TARGET_LINK_LIBRARIES(Follow ifq elang wiredtiger thostmduserapi thosttraderapi pthread dl)
-#TARGET_LINK_LIBRARIES(test_ifqconf ifq pthread dl)
-#TARGET_LINK_LIBRARIES(test_mongo ifq mongocxx bsoncxx pthread dl)
 #TARGET_LINK_LIBRARIES(test_idata ifq wiredtiger mongocxx bsoncxx pthread dl)
 
 cmake_minimum_required (VERSION 2.8)
