@@ -44,9 +44,9 @@ int testX() {
   Py_Finalize();
 }
 
-int main()
-{
-  testX();
-}
+//int main()
+//{
+//  testX();
+//}
 
 
