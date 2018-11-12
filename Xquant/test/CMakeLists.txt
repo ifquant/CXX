@@ -7,7 +7,7 @@
 cmake_minimum_required (VERSION 2.8)
 
 project (ifqtest)
-include(${CMAKE_SOURCE_DIR}/../cmake/find_all.cmake)
+include(${CMAKE_SOURCE_DIR}/../../cmake/find_all.cmake)
 
 # some 3rd-party/customed include/link path
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -export-dynamic")
