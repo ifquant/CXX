@@ -1,0 +1,779 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AccountBase	account1.h	/^struct AccountBase {$/;"	s	namespace:opentrade
+AccountManager	account1.h	/^class AccountManager : public Singleton<AccountManager> {$/;"	c	namespace:opentrade
+Adapter	adapter.h	/^class Adapter {$/;"	c	namespace:opentrade
+AdapterManager	adapter.h	/^class AdapterManager {$/;"	c	namespace:opentrade
+AdapterMap	adapter.h	/^  typedef std::unordered_map<std::string, T*> AdapterMap;$/;"	t	class:opentrade::AdapterManager
+Add	adapter.h	/^  void Add(T* adapter) { adapters_[adapter->name()] = adapter; }$/;"	f	class:opentrade::AdapterManager
+Add	market_data.cc	/^void MarketDataManager::Add(MarketDataAdapter* adapter) {$/;"	f	class:opentrade::MarketDataManager
+AddObj	python.h	/^  void AddObj(const void* native, PyObject* obj) { objs_[native] = obj; }$/;"	f	class:opentrade::Python
+AddTask	task_pool.h	/^  void AddTask(const T& func) {$/;"	f	class:opentrade::TaskPool
+AddTask	task_pool.h	/^  void AddTask(const T& func, Tm t) {$/;"	f	class:opentrade::TaskPool
+Algo	algo.h	/^class Algo : public Adapter {$/;"	c	namespace:opentrade
+AlgoManager	algo.h	/^class AlgoManager : public AdapterManager<Algo>, public Singleton<AlgoManager> {$/;"	c	namespace:opentrade
+AlgoRunner	algo.h	/^class AlgoRunner {$/;"	c	namespace:opentrade
+Bod	position.h	/^struct Bod {$/;"	s	namespace:opentrade
+BrokerAccount	account1.h	/^struct BrokerAccount : public AccountBase {$/;"	s	namespace:opentrade
+BrokerAccountMap	account1.h	/^  typedef std::unordered_map<Exchange::IdType, BrokerAccount*> BrokerAccountMap;$/;"	t	struct:opentrade::SubAccount
+CFunc	adapter.h	/^  typedef Adapter* (*CFunc)();$/;"	t	class:opentrade::Adapter
+Cancel	algo.cc	/^bool Algo::Cancel(const Order& ord) {$/;"	f	class:opentrade::Algo
+Cancel	exchange_connectivity.cc	/^bool ExchangeConnectivityManager::Cancel(const Order& orig_ord) {$/;"	f	class:opentrade::ExchangeConnectivityManager
+Cancel	exchange_connectivity.cc	/^static inline bool Cancel(Order* cancel_order) {$/;"	f	namespace:opentrade
+Cancel	order.cc	/^void GlobalOrderBook::Cancel() {$/;"	f	class:opentrade::GlobalOrderBook
+Check	risk.cc	/^bool RiskManager::Check(const Order& ord) {$/;"	f	class:opentrade::RiskManager
+Check	risk.cc	/^static bool Check(const char* name, const Order& ord, const AccountBase& acc,$/;"	f	namespace:opentrade
+CheckAdapter	exchange_connectivity.cc	/^static inline bool CheckAdapter(ExchangeConnectivityAdapter* adapter,$/;"	f	namespace:opentrade
+CheckMsgRate	risk.cc	/^bool RiskManager::CheckMsgRate(const Order& ord) {$/;"	f	class:opentrade::RiskManager
+CheckMsgRate	risk.cc	/^static bool CheckMsgRate(const char* name, const AccountBase& acc,$/;"	f	namespace:opentrade
+Clone	adapter.h	/^  Adapter* Clone() { return create_func_(); }$/;"	f	class:opentrade::Adapter
+Close	connection.h	/^  void Close() { closed_ = true; }$/;"	f	class:opentrade::Connection
+Confirmation	order.h	/^struct Confirmation {$/;"	s	namespace:opentrade
+Connection	connection.cc	/^Connection::Connection(Transport::Ptr transport,$/;"	f	class:opentrade::Connection
+Connection	connection.h	/^class Connection : public std::enable_shared_from_this<Connection> {$/;"	c	namespace:opentrade
+Contract	order.h	/^struct Contract {$/;"	s	namespace:opentrade
+CreateAlgo	python.cc	/^static PyObject *CreateAlgo(Algo *algo) {$/;"	f	namespace:opentrade
+CreateInstrument	python.cc	/^static PyObject *CreateInstrument(Algo *algo, const Instrument *inst,$/;"	f	namespace:opentrade
+CreateMd	python.cc	/^static PyObject *CreateMd(const MarketData *md) {$/;"	f	namespace:opentrade
+CreateObject	python.cc	/^static inline PyObject *CreateObject(const void *native = nullptr,$/;"	f	namespace:opentrade
+CreateOrder	python.cc	/^static PyObject *CreateOrder(Order *order, PyObject *instrument,$/;"	f	namespace:opentrade
+CreateParamsDict	python.cc	/^static PyObject *CreateParamsDict(const Algo::ParamMap &params) {$/;"	f	namespace:opentrade
+CreateSecurity	python.cc	/^static PyObject *CreateSecurity(const Security *sec) {$/;"	f	namespace:opentrade
+CreateSubAccount	python.cc	/^static inline PyObject *CreateSubAccount(const SubAccount *acc) {$/;"	f	namespace:opentrade
+CurrentPrice	security.cc	/^double Security::CurrentPrice() const {$/;"	f	class:opentrade::Security
+DataSrc	market_data.h	/^struct DataSrc {$/;"	s	namespace:opentrade
+Database	database.h	/^class Database {$/;"	c	namespace:opentrade
+Depth	market_data.h	/^  typedef Quote Depth[kDepthSize];$/;"	t	struct:opentrade::MarketData
+Exchange	security.h	/^struct Exchange {$/;"	s	namespace:opentrade
+ExchangeConnectivityAdapter	exchange_connectivity.h	/^class ExchangeConnectivityAdapter : public virtual NetworkAdapter {$/;"	c	namespace:opentrade
+ExchangeConnectivityManager	exchange_connectivity.h	/^class ExchangeConnectivityManager$/;"	c	namespace:opentrade
+FindInMap	utility.h	/^const typename V::mapped_type& FindInMap(const V& map,$/;"	f	namespace:opentrade
+Func	adapter.h	/^  typedef std::function<Adapter*()> Func;$/;"	t	class:opentrade::Adapter
+Get	algo.h	/^  Algo* Get(const std::string& token) {$/;"	f	class:opentrade::AlgoManager
+Get	connection.cc	/^inline T Get(const json& j) {$/;"	f	namespace:opentrade
+Get	connection.cc	/^inline bool Get(const json& j) {$/;"	f	namespace:opentrade
+Get	connection.cc	/^inline double Get(const json& j) {$/;"	f	namespace:opentrade
+Get	connection.cc	/^inline std::string Get(const json& j) {$/;"	f	namespace:opentrade
+Get	logger.h	/^  static auto Get(const std::string& name) {$/;"	f	class:opentrade::Logger
+Get	market_data.cc	/^const MarketData& MarketDataManager::Get(Security::IdType id,$/;"	f	class:opentrade::MarketDataManager
+Get	market_data.cc	/^const MarketData& MarketDataManager::Get(const Security& sec,$/;"	f	class:opentrade::MarketDataManager
+Get	order.h	/^  Order* Get(Order::IdType id) {$/;"	f	class:opentrade::GlobalOrderBook
+Get	position.h	/^  const Position& Get(const BrokerAccount& acc, const Security& sec) const {$/;"	f	class:opentrade::PositionManager
+Get	position.h	/^  const Position& Get(const SubAccount& acc, const Security& sec) const {$/;"	f	class:opentrade::PositionManager
+Get	position.h	/^  const Position& Get(const User& user, const Security& sec) const {$/;"	f	class:opentrade::PositionManager
+Get	security.h	/^  const Security* Get(Security::IdType id) {$/;"	f	class:opentrade::SecurityManager
+GetAdapter	adapter.h	/^  T* GetAdapter(const std::string& name) { return FindInMap(adapters_, name); }$/;"	f	class:opentrade::AdapterManager
+GetAddress	connection.h	/^  std::string GetAddress() const { return transport_->GetAddress(); }$/;"	f	class:opentrade::Connection
+GetAddress	server.cc	/^  std::string GetAddress() const { return ws_->remote_endpoint_address(); }$/;"	f	struct:opentrade::WsSocketWrapper
+GetAttrString	python.cc	/^static inline std::string GetAttrString(PyObject *obj, const char **names,$/;"	f	namespace:opentrade
+GetBrokerAccount	account1.h	/^  const BrokerAccount* GetBrokerAccount(BrokerAccount::IdType id) {$/;"	f	class:opentrade::AccountManager
+GetCallable	python.cc	/^static inline PyObject *GetCallable(PyObject *m, const char *name) {$/;"	f	namespace:opentrade
+GetDouble	python.cc	/^static inline double GetDouble(PyObject *obj) {$/;"	f	namespace:opentrade
+GetExchange	security.h	/^  const Exchange* GetExchange(Exchange::IdType id) {$/;"	f	class:opentrade::SecurityManager
+GetExchange	security.h	/^  const Exchange* GetExchange(const std::string& name) {$/;"	f	class:opentrade::SecurityManager
+GetId	market_data.h	/^  static constexpr IdType GetId(const char* src) {$/;"	f	struct:opentrade::DataSrc
+GetMarketData	connection.cc	/^static inline void GetMarketData(const MarketData& md, const MarketData& md0,$/;"	f	namespace:opentrade
+GetNative	python.cc	/^Python *GetNative(PyObject *self) {$/;"	f	namespace:opentrade
+GetNativePtr	python.cc	/^void *GetNativePtr(PyObject *self, const char *name = "__native__") {$/;"	f	namespace:opentrade
+GetNowStr	utility.h	/^static inline const char* GetNowStr() {$/;"	f	namespace:opentrade
+GetNum	connection.cc	/^inline double GetNum(const json& j) {$/;"	f	namespace:opentrade
+GetObj	python.h	/^  PyObject* GetObj(const void* native) { return objs_[native]; }$/;"	f	class:opentrade::Python
+GetOrderSide	order.h	/^static inline bool GetOrderSide(const std::string& side_str, OrderSide* side) {$/;"	f	namespace:opentrade
+GetParam	utility.h	/^inline V GetParam(const M& var_map, const std::string& name, V default_value) {$/;"	f	namespace:opentrade
+GetParam	utility.h	/^inline int GetParam(const M& var_map, const std::string& name,$/;"	f	namespace:opentrade
+GetParam	utility.h	/^inline std::string GetParam(const M& var_map, const std::string& name,$/;"	f	namespace:opentrade
+GetParam	utility.h	/^std::optional<V> GetParam(const M& var_map, const std::string& name) {$/;"	f	namespace:opentrade
+GetRoute	market_data.cc	/^inline MarketDataAdapter* MarketDataManager::GetRoute(const Security& sec,$/;"	f	class:opentrade::MarketDataManager
+GetSide	connection.cc	/^static inline const char* GetSide(OrderSide c) {$/;"	f	namespace:opentrade
+GetStr	market_data.h	/^  static const char* GetStr(IdType id) {$/;"	f	struct:opentrade::DataSrc
+GetString	python.cc	/^static inline std::string GetString(PyObject *obj, bool convert2str = false) {$/;"	f	namespace:opentrade
+GetSubAccount	account1.h	/^  const SubAccount* GetSubAccount(SubAccount::IdType id) {$/;"	f	class:opentrade::AccountManager
+GetSubAccount	account1.h	/^  const SubAccount* GetSubAccount(const std::string& name) {$/;"	f	class:opentrade::AccountManager
+GetTickSize	security.cc	/^double Exchange::GetTickSize(double ref) const {$/;"	f	class:opentrade::Exchange
+GetTickSize	security.h	/^  double GetTickSize(double px) const {$/;"	f	struct:opentrade::Security
+GetTif	connection.cc	/^static inline const char* GetTif(TimeInForce c) {$/;"	f	namespace:opentrade
+GetTime	security.h	/^  int GetTime() const {  \/\/ seconds since midnight in exchange time zone$/;"	f	struct:opentrade::Exchange
+GetType	connection.cc	/^static inline const char* GetType(OrderType c) {$/;"	f	namespace:opentrade
+GetUser	account1.h	/^  const User* GetUser(User::IdType id) { return FindInMap(users_, id); }$/;"	f	class:opentrade::AccountManager
+GetUser	account1.h	/^  const User* GetUser(const std::string& name) {$/;"	f	class:opentrade::AccountManager
+GetUtcSinceMidNight	utility.h	/^static inline int GetUtcSinceMidNight(int tm_gmtoff) {$/;"	f	namespace:opentrade
+GetUtcTimeOffset	utility.h	/^static inline int GetUtcTimeOffset(const char* tz) {$/;"	f	namespace:opentrade
+GetValue	database.h	/^  static T GetValue(soci::row const& row, int index, T default_value) {$/;"	f	class:opentrade::Database
+GetValue	database.h	/^  static const char* GetValue(soci::row const& row, int index,$/;"	f	class:opentrade::Database
+GetValueScalar	python.cc	/^static inline bool GetValueScalar(PyObject *pvalue, T *out) {$/;"	f	namespace:opentrade
+GetVersion	adapter.h	/^  int GetVersion() const { return kApiVersion; }$/;"	f	class:opentrade::Adapter
+GlobalOrderBook	order.h	/^class GlobalOrderBook : public Singleton<GlobalOrderBook> {$/;"	c	namespace:opentrade
+Handle	algo.cc	/^void AlgoManager::Handle(Confirmation::Ptr cm) {$/;"	f	class:opentrade::AlgoManager
+Handle	exchange_connectivity.cc	/^static inline void Handle(const std::string& name, Order::IdType id, T desc,$/;"	f	namespace:opentrade
+Handle	exchange_connectivity.cc	/^static inline void Handle(const std::string& name, Order::IdType id,$/;"	f	namespace:opentrade
+Handle	order.cc	/^void GlobalOrderBook::Handle(Confirmation::Ptr cm, bool offline) {$/;"	f	class:opentrade::GlobalOrderBook
+Handle	position.cc	/^void PositionManager::Handle(Confirmation::Ptr cm, bool offline) {$/;"	f	class:opentrade::PositionManager
+HandleCancelRejected	exchange_connectivity.cc	/^void ExchangeConnectivityAdapter::HandleCancelRejected($/;"	f	class:opentrade::ExchangeConnectivityAdapter
+HandleCanceled	exchange_connectivity.cc	/^void ExchangeConnectivityAdapter::HandleCanceled(Order::IdType id,$/;"	f	class:opentrade::ExchangeConnectivityAdapter
+HandleConfirmation	exchange_connectivity.cc	/^static inline void HandleConfirmation(Order* ord, OrderStatus exec_type,$/;"	f	namespace:opentrade
+HandleConfirmation	exchange_connectivity.cc	/^static inline void HandleConfirmation(Order* ord, double qty, double price,$/;"	f	namespace:opentrade
+HandleFill	exchange_connectivity.cc	/^void ExchangeConnectivityAdapter::HandleFill($/;"	f	class:opentrade::ExchangeConnectivityAdapter
+HandleFinish	common1.h	/^inline void PositionValue::HandleFinish(bool is_buy, double leaves_qty,$/;"	f	class:opentrade::PositionValue
+HandleFinish	position.cc	/^inline void Position::HandleFinish(bool is_buy, double leaves_qty,$/;"	f	class:opentrade::Position
+HandleNew	common1.h	/^inline void PositionValue::HandleNew(bool is_buy, double qty, double price,$/;"	f	class:opentrade::PositionValue
+HandleNew	exchange_connectivity.cc	/^void ExchangeConnectivityAdapter::HandleNew(Order::IdType id,$/;"	f	class:opentrade::ExchangeConnectivityAdapter
+HandleNew	position.cc	/^inline void Position::HandleNew(bool is_buy, double qty, double price,$/;"	f	class:opentrade::Position
+HandleNewRejected	exchange_connectivity.cc	/^void ExchangeConnectivityAdapter::HandleNewRejected(Order::IdType id,$/;"	f	class:opentrade::ExchangeConnectivityAdapter
+HandleOthers	exchange_connectivity.cc	/^void ExchangeConnectivityAdapter::HandleOthers(Order::IdType id,$/;"	f	class:opentrade::ExchangeConnectivityAdapter
+HandlePendingCancel	exchange_connectivity.cc	/^void ExchangeConnectivityAdapter::HandlePendingCancel($/;"	f	class:opentrade::ExchangeConnectivityAdapter
+HandlePendingNew	exchange_connectivity.cc	/^void ExchangeConnectivityAdapter::HandlePendingNew(Order::IdType id,$/;"	f	class:opentrade::ExchangeConnectivityAdapter
+HandlePnl	position.cc	/^inline void HandlePnl(double qty, double price, double multiplier, bool is_fx,$/;"	f	namespace:opentrade
+HandleTrade	common1.h	/^inline void PositionValue::HandleTrade(bool is_buy, double qty, double price,$/;"	f	class:opentrade::PositionValue
+HandleTrade	position.cc	/^inline void Position::HandleTrade(bool is_buy, double qty, double price,$/;"	f	class:opentrade::Position
+IdType	account1.h	/^  typedef uint16_t IdType;$/;"	t	struct:opentrade::BrokerAccount
+IdType	account1.h	/^  typedef uint16_t IdType;$/;"	t	struct:opentrade::SubAccount
+IdType	account1.h	/^  typedef uint16_t IdType;$/;"	t	struct:opentrade::User
+IdType	algo.h	/^  typedef uint32_t IdType;$/;"	t	class:opentrade::Algo
+IdType	market_data.h	/^  typedef uint32_t IdType;$/;"	t	struct:opentrade::DataSrc
+IdType	order.h	/^  typedef uint32_t IdType;$/;"	t	struct:opentrade::Order
+IdType	security.h	/^  typedef uint16_t IdType;$/;"	t	struct:opentrade::Exchange
+IdType	security.h	/^  typedef uint32_t IdType;$/;"	t	struct:opentrade::Security
+InitalizePy	python.cc	/^void InitalizePy() {$/;"	f	namespace:opentrade
+Initialize	account.cc	/^void AccountManager::Initialize() {$/;"	f	class:opentrade::AccountManager
+Initialize	algo.cc	/^void AlgoManager::Initialize() {$/;"	f	class:opentrade::AlgoManager
+Initialize	database.cc	/^void Database::Initialize(const std::string& url, uint8_t pool_size,$/;"	f	class:opentrade::Database
+Initialize	logger.h	/^  static void Initialize(const std::string& name,$/;"	f	class:opentrade::Logger
+Initialize	order.cc	/^void GlobalOrderBook::Initialize() {$/;"	f	class:opentrade::GlobalOrderBook
+Initialize	position.cc	/^void PositionManager::Initialize() {$/;"	f	class:opentrade::PositionManager
+Initialize	security.cc	/^void SecurityManager::Initialize() {$/;"	f	class:opentrade::SecurityManager
+Instance	common.h	/^    static T& Instance() {$/;"	f	class:xquant::Singleton
+Instance	common1.h	/^  static V& Instance() {$/;"	f	class:opentrade::Singleton
+Instrument	algo.h	/^  Instrument(Algo* algo, const Security& sec, DataSrc::IdType src)$/;"	f	class:opentrade::Instrument
+Instrument	algo.h	/^class Instrument {$/;"	c	namespace:opentrade
+IsBuy	order.h	/^  bool IsBuy() const { return opentrade::IsBuy(side); }$/;"	f	struct:opentrade::Contract
+IsBuy	order.h	/^static inline bool IsBuy(OrderSide side) { return side == kBuy; }$/;"	f	namespace:opentrade
+IsDupExecId	order.h	/^  bool IsDupExecId(Order::IdType id, const std::string& exec_id) {$/;"	f	class:opentrade::GlobalOrderBook
+IsInTradePeriod	security.h	/^  bool IsInTradePeriod() const { return exchange->IsInTradePeriod(); }$/;"	f	struct:opentrade::Security
+IsInTradePeriod	security.h	/^  bool IsInTradePeriod() const {$/;"	f	struct:opentrade::Exchange
+IsLive	order.h	/^  bool IsLive() const {$/;"	f	struct:opentrade::Order
+IsSubscribed	algo.h	/^  bool IsSubscribed(DataSrc::IdType src, Security::IdType id) {$/;"	f	class:opentrade::AlgoManager
+IsType	python.cc	/^static inline bool IsType(PyObject *obj, const char *type) {$/;"	f	namespace:opentrade
+Jsonify	connection.cc	/^static inline void Jsonify(const ParamDef::Value& v, json* j) {$/;"	f	namespace:opentrade
+JsonifyScala	connection.cc	/^static inline bool JsonifyScala(const T& v, json* j) {$/;"	f	namespace:opentrade
+LOG_DEBUG	logger.h	74;"	d
+LOG_ERROR	logger.h	77;"	d
+LOG_FATAL	logger.h	78;"	d
+LOG_INFO	logger.h	75;"	d
+LOG_TRACE	logger.h	73;"	d
+LOG_WARN	logger.h	76;"	d
+Limits	common.h	/^struct Limits {$/;"	s	namespace:xquant
+Limits	common1.h	/^struct Limits {$/;"	s	namespace:opentrade
+Load	adapter.cc	/^Adapter* Adapter::Load(const std::string& sofile) {$/;"	f	class:opentrade::Adapter
+Load	python.cc	/^Python *Python::Load(const std::string &module_name) {$/;"	f	class:opentrade::Python
+LoadFromDatabase	security.cc	/^void SecurityManager::LoadFromDatabase() {$/;"	f	class:opentrade::SecurityManager
+LoadPyModule	python.cc	/^PyModule LoadPyModule(const std::string &module_name) {$/;"	f	namespace:opentrade
+LoadStore	algo.cc	/^void AlgoManager::LoadStore(uint32_t seq0, Connection* conn) {$/;"	f	class:opentrade::AlgoManager
+LoadStore	order.cc	/^void GlobalOrderBook::LoadStore(uint32_t seq0, Connection* conn) {$/;"	f	class:opentrade::GlobalOrderBook
+LockGIL	python.cc	/^  LockGIL() { m.lock(); }$/;"	f	struct:opentrade::LockGIL
+LockGIL	python.cc	/^struct LockGIL {$/;"	s	namespace:opentrade	file:
+LockGuard	algo.h	/^  typedef std::lock_guard<std::mutex> LockGuard;$/;"	t	class:opentrade::AlgoRunner
+LockGuard	server.cc	/^typedef std::lock_guard<std::mutex> LockGuard;$/;"	t	namespace:opentrade	file:
+Logger	logger.h	/^class Logger {$/;"	c	namespace:opentrade
+MarketData	market_data.h	/^struct MarketData {$/;"	s	namespace:opentrade
+MarketDataAdapter	market_data.h	/^class MarketDataAdapter : public virtual NetworkAdapter {$/;"	c	namespace:opentrade
+MarketDataManager	market_data.h	/^class MarketDataManager : public AdapterManager<MarketDataAdapter>,$/;"	c	namespace:opentrade
+MarketDataMap	market_data.h	/^      MarketDataMap;$/;"	t	class:opentrade::MarketDataAdapter
+NetworkAdapter	adapter.h	/^class NetworkAdapter : public Adapter {$/;"	c	namespace:opentrade
+NewOrderId	order.h	/^  uint32_t NewOrderId() { return ++order_id_counter_; }$/;"	f	class:opentrade::GlobalOrderBook
+NowUtcInMicro	utility.h	/^static inline int64_t NowUtcInMicro() {$/;"	f	namespace:opentrade
+OPENTRADE_ACCOUNT_H_	account1.h	2;"	d
+OPENTRADE_ADAPTER_H_	adapter.h	2;"	d
+OPENTRADE_ALGO_H_	algo.h	2;"	d
+OPENTRADE_COMMON_H_	common1.h	2;"	d
+OPENTRADE_CONNECTION_H_	connection.h	2;"	d
+OPENTRADE_DATABASE_H_	database.h	2;"	d
+OPENTRADE_EXCHANGE_CONNECTIVITY_H_	exchange_connectivity.h	2;"	d
+OPENTRADE_LOGGER_H_	logger.h	2;"	d
+OPENTRADE_MARKET_DATA_H_	market_data.h	2;"	d
+OPENTRADE_ORDER_H_	order.h	2;"	d
+OPENTRADE_POSITION_H_	position.h	2;"	d
+OPENTRADE_PYTHON_H_	python.h	2;"	d
+OPENTRADE_RISK_H_	risk.h	2;"	d
+OPENTRADE_SECURITY_H_	security.h	2;"	d
+OPENTRADE_SERVER_H_	server.h	2;"	d
+OPENTRADE_TASK_POOL_H_	task_pool.h	2;"	d
+OPENTRADE_UTILITY_H_	utility.h	2;"	d
+OnMessage	connection.cc	/^void Connection::OnMessage(const std::string& msg) {$/;"	f	class:opentrade::Connection
+Order	order.h	/^struct Order : public Contract {$/;"	s	namespace:opentrade
+Orders	algo.h	/^  typedef std::set<Order*> Orders;$/;"	t	class:opentrade::Instrument
+ParamDef	algo.h	/^struct ParamDef {$/;"	s	namespace:opentrade
+ParamDefs	algo.h	/^typedef std::vector<ParamDef> ParamDefs;$/;"	t	namespace:opentrade
+ParamMap	algo.h	/^  typedef std::unordered_map<std::string, ParamDef::Value> ParamMap;$/;"	t	class:opentrade::Algo
+ParseLimits	account.cc	/^Limits ParseLimits(const std::string& limits_str) {$/;"	f	namespace:opentrade
+ParseParamDef	python.cc	/^static inline bool ParseParamDef(PyObject *item, ParamDef *out) {$/;"	f	namespace:opentrade
+ParseParamDefs	python.cc	/^static ParamDefs ParseParamDefs(PyObject *pyfunc) {$/;"	f	namespace:opentrade
+ParseParamScalar	connection.cc	/^static inline T ParseParamScalar(const json& j) {$/;"	f	namespace:opentrade
+ParseParamValue	connection.cc	/^static inline ParamDef::Value ParseParamValue(const json& j) {$/;"	f	namespace:opentrade
+ParseParams	connection.cc	/^static inline decltype(auto) ParseParams(const json& params) {$/;"	f	namespace:opentrade
+Persist	algo.cc	/^void AlgoManager::Persist(const Algo& algo, const std::string& status,$/;"	f	class:opentrade::AlgoManager
+Place	algo.cc	/^Order* Algo::Place(const Contract& contract, Instrument* inst) {$/;"	f	class:opentrade::Algo
+Place	exchange_connectivity.cc	/^bool ExchangeConnectivityManager::Place(Order* ord) {$/;"	f	class:opentrade::ExchangeConnectivityManager
+Pnl	position.h	/^  struct Pnl {$/;"	s	class:opentrade::PositionManager
+Position	position.h	/^struct Position : public PositionValue {$/;"	s	namespace:opentrade
+PositionManager	position.h	/^class PositionManager : public Singleton<PositionManager> {$/;"	c	namespace:opentrade
+PositionValue	common.h	/^struct PositionValue {$/;"	s	namespace:xquant
+PositionValue	common1.h	/^struct PositionValue {$/;"	s	namespace:opentrade
+PrintPyError	python.cc	/^static bool PrintPyError() {$/;"	f	namespace:opentrade
+Ptr	connection.h	/^  typedef std::shared_ptr<Connection> Ptr;$/;"	t	class:opentrade::Connection
+Ptr	connection.h	/^  typedef std::shared_ptr<Transport> Ptr;$/;"	t	struct:opentrade::Transport
+Ptr	order.h	/^  typedef std::shared_ptr<Confirmation> Ptr;$/;"	t	struct:opentrade::Confirmation
+Publish	server.cc	/^void Server::Publish(Confirmation::Ptr cm) {$/;"	f	class:opentrade::Server
+Publish	server.cc	/^void Server::Publish(const Algo& algo, const std::string& status,$/;"	f	class:opentrade::Server
+PublishMarketStatus	connection.cc	/^void Connection::PublishMarketStatus() {$/;"	f	class:opentrade::Connection
+PublishMarketdata	connection.cc	/^void Connection::PublishMarketdata() {$/;"	f	class:opentrade::Connection
+PyModule	python.h	/^struct PyModule {$/;"	s	namespace:opentrade
+Python	python.cc	/^Python::Python() {}$/;"	f	class:opentrade::Python
+Python	python.h	/^class Python : public Algo {$/;"	c	namespace:opentrade
+Quote	market_data.h	/^  struct Quote {$/;"	s	struct:opentrade::MarketData
+Register	algo.cc	/^inline void AlgoManager::Register(Instrument* inst) {$/;"	f	class:opentrade::AlgoManager
+RegisterFunc	python.cc	/^static void RegisterFunc(PyMethodDef *def, PyObject *obj) {$/;"	f	namespace:opentrade
+RepeatTask	task_pool.h	/^  void RepeatTask(const T& func, Tm t, Tm2 interval) {$/;"	f	class:opentrade::TaskPool
+RiskManager	risk.h	/^class RiskManager : public Singleton<RiskManager> {$/;"	c	namespace:opentrade
+Run	algo.cc	/^void AlgoManager::Run(int nthreads) {$/;"	f	class:opentrade::AlgoManager
+Security	security.h	/^struct Security {$/;"	s	namespace:opentrade
+SecurityManager	security.h	/^class SecurityManager : public Singleton<SecurityManager> {$/;"	c	namespace:opentrade
+SecurityMap	security.h	/^      SecurityMap;$/;"	t	class:opentrade::SecurityManager
+SecurityTuple	algo.h	/^    SecurityTuple;$/;"	t	namespace:opentrade
+Send	connection.cc	/^void Connection::Send(Algo::IdType id, time_t tm, const std::string& token,$/;"	f	class:opentrade::Connection
+Send	connection.cc	/^void Connection::Send(Confirmation::Ptr cm) {$/;"	f	class:opentrade::Connection
+Send	connection.cc	/^void Connection::Send(const Algo& algo, const std::string& status,$/;"	f	class:opentrade::Connection
+Send	connection.cc	/^void Connection::Send(const Confirmation& cm, bool offline) {$/;"	f	class:opentrade::Connection
+Send	connection.h	/^  void Send(const std::string& msg) {$/;"	f	class:opentrade::Connection
+ServeStatic	server.cc	/^static void ServeStatic() {$/;"	f	namespace:opentrade
+Server	server.h	/^class Server {$/;"	c	namespace:opentrade
+Session	database.h	/^  static auto Session() { return std::make_unique<soci::session>(*pool_); }$/;"	f	class:opentrade::Database
+SetItem	python.cc	/^void SetItem(const char *name, T v, PyObject *obj) {$/;"	f	namespace:opentrade
+SetItem	python.cc	/^void SetItem(const char *name, const char *v, PyObject *obj) {$/;"	f	namespace:opentrade
+SetItem	python.cc	/^void SetItem(const char *name, double v, PyObject *obj) {$/;"	f	namespace:opentrade
+SetItem	python.cc	/^void SetItem(const char *name, float v, PyObject *obj) {$/;"	f	namespace:opentrade
+SetTimeout	algo.cc	/^void Algo::SetTimeout(std::function<void()> func, uint32_t milliseconds) {$/;"	f	class:opentrade::Algo
+SetTimeout	algo.cc	/^void AlgoManager::SetTimeout(Algo::IdType id, std::function<void()> func,$/;"	f	class:opentrade::AlgoManager
+SetValue	python.cc	/^void SetValue(const char *name, T v, PyObject *obj) {$/;"	f	namespace:opentrade
+SetValue	python.cc	/^void SetValue(const char *name, const char *v, PyObject *obj) {$/;"	f	namespace:opentrade
+SetValue	python.cc	/^void SetValue(const char *name, const void *v, PyObject *obj) {$/;"	f	namespace:opentrade
+SetValue	python.cc	/^void SetValue(const char *name, double v, PyObject *obj) {$/;"	f	namespace:opentrade
+SetValue	python.cc	/^void SetValue(const char *name, float v, PyObject *obj) {$/;"	f	namespace:opentrade
+Singleton	common.h	/^    Singleton() {}$/;"	f	class:xquant::Singleton
+Singleton	common.h	/^class Singleton {$/;"	c	namespace:xquant
+Singleton	common1.h	/^  Singleton() {}$/;"	f	class:opentrade::Singleton
+Singleton	common1.h	/^class Singleton {$/;"	c	namespace:opentrade
+Spawn	algo.cc	/^Algo* AlgoManager::Spawn(std::shared_ptr<Algo::ParamMap> params,$/;"	f	class:opentrade::AlgoManager
+Split	utility.h	/^static inline decltype(auto) Split(const std::string& str, const char* sep,$/;"	f	namespace:opentrade
+SqlLog	database.cc	/^  SqlLog() : std::ostream(this) {}$/;"	f	class:opentrade::SqlLog
+SqlLog	database.cc	/^class SqlLog : public std::ostream, std::streambuf {$/;"	c	namespace:opentrade	file:
+Start	server.cc	/^void Server::Start(int port, int nthreads) {$/;"	f	class:opentrade::Server
+Stop	algo.cc	/^void Algo::Stop() {$/;"	f	class:opentrade::Algo
+Stop	algo.cc	/^void AlgoManager::Stop() {$/;"	f	class:opentrade::AlgoManager
+Stop	algo.cc	/^void AlgoManager::Stop(Algo::IdType id) {$/;"	f	class:opentrade::AlgoManager
+Stop	algo.cc	/^void AlgoManager::Stop(const std::string& token) {$/;"	f	class:opentrade::AlgoManager
+Stop	server.cc	/^void Server::Stop() {$/;"	f	class:opentrade::Server
+Stop	task_pool.h	/^  void Stop(bool wait = true) {$/;"	f	class:opentrade::TaskPool
+StrMap	account1.h	/^  typedef std::unordered_map<std::string, std::string> StrMap;$/;"	t	struct:opentrade::BrokerAccount
+StrMap	adapter.h	/^  typedef std::unordered_map<std::string, std::string> StrMap;$/;"	t	class:opentrade::Adapter
+SubAccount	account1.h	/^struct SubAccount : public AccountBase {$/;"	s	namespace:opentrade
+SubAccountBrokerAccountMap	account1.h	/^struct SubAccountBrokerAccountMap {$/;"	s	namespace:opentrade
+SubAccountMap	account1.h	/^  typedef std::unordered_map<SubAccount::IdType, SubAccount*> SubAccountMap;$/;"	t	struct:opentrade::User
+Subscribe	algo.cc	/^Instrument* Algo::Subscribe(const Security& sec, DataSrc::IdType src) {$/;"	f	class:opentrade::Algo
+Subscribe	market_data.cc	/^MarketDataAdapter* MarketDataManager::Subscribe(const Security& sec,$/;"	f	class:opentrade::MarketDataManager
+TaskPool	task_pool.h	/^  explicit TaskPool(size_t nthreads = 1) {$/;"	f	class:opentrade::TaskPool
+TaskPool	task_pool.h	/^class TaskPool {$/;"	c	namespace:opentrade
+Throttle	common.h	/^struct Throttle {$/;"	s	namespace:xquant
+Throttle	common1.h	/^struct Throttle {$/;"	s	namespace:opentrade
+TickSizeTable	security.h	/^  typedef std::vector<TickSizeTuple> TickSizeTable;$/;"	t	struct:opentrade::Exchange
+TickSizeTuple	security.h	/^  struct TickSizeTuple {$/;"	s	struct:opentrade::Exchange
+Trade	market_data.h	/^  struct Trade {$/;"	s	struct:opentrade::MarketData
+Transport	connection.h	/^struct Transport {$/;"	s	namespace:opentrade
+Update	algo.cc	/^void AlgoManager::Update(DataSrc::IdType src, Security::IdType id) {$/;"	f	class:opentrade::AlgoManager
+Update	common.h	/^  void Update(int tm2) {$/;"	f	struct:xquant::Throttle
+Update	common1.h	/^  void Update(int tm2) {$/;"	f	struct:opentrade::Throttle
+Update	market_data.cc	/^void MarketDataAdapter::Update(Security::IdType id, const MarketData::Quote& q,$/;"	f	class:opentrade::MarketDataAdapter
+Update	market_data.cc	/^void MarketDataAdapter::Update(Security::IdType id, double last_price,$/;"	f	class:opentrade::MarketDataAdapter
+Update	market_data.cc	/^void MarketDataAdapter::Update(Security::IdType id, double price, double size,$/;"	f	class:opentrade::MarketDataAdapter
+UpdateAskPrice	market_data.cc	/^void MarketDataAdapter::UpdateAskPrice(Security::IdType id, double v) {$/;"	f	class:opentrade::MarketDataAdapter
+UpdateAskSize	market_data.cc	/^void MarketDataAdapter::UpdateAskSize(Security::IdType id, double v) {$/;"	f	class:opentrade::MarketDataAdapter
+UpdateBidPrice	market_data.cc	/^void MarketDataAdapter::UpdateBidPrice(Security::IdType id, double v) {$/;"	f	class:opentrade::MarketDataAdapter
+UpdateBidSize	market_data.cc	/^void MarketDataAdapter::UpdateBidSize(Security::IdType id, double v) {$/;"	f	class:opentrade::MarketDataAdapter
+UpdateCheckSum	security.cc	/^void SecurityManager::UpdateCheckSum() {$/;"	f	class:opentrade::SecurityManager
+UpdateLastPrice	market_data.cc	/^void MarketDataAdapter::UpdateLastPrice(Security::IdType id, double v) {$/;"	f	class:opentrade::MarketDataAdapter
+UpdateLastSize	market_data.cc	/^void MarketDataAdapter::UpdateLastSize(Security::IdType id, double v) {$/;"	f	class:opentrade::MarketDataAdapter
+UpdateMidAsLastPrice	market_data.cc	/^void MarketDataAdapter::UpdateMidAsLastPrice(Security::IdType id) {$/;"	f	class:opentrade::MarketDataAdapter
+UpdateOrder	order.cc	/^inline void GlobalOrderBook::UpdateOrder(Confirmation::Ptr cm) {$/;"	f	class:opentrade::GlobalOrderBook
+UpdatePnl	position.cc	/^void PositionManager::UpdatePnl() {$/;"	f	class:opentrade::PositionManager
+UpdatePx	market_data.cc	/^static inline void UpdatePx(double px, MarketData::Trade* t) {$/;"	f	namespace:opentrade
+UpdateThrottle	exchange_connectivity.cc	/^static inline void UpdateThrottle(const Order& ord) {$/;"	f	namespace:opentrade
+UpdateVolume	market_data.cc	/^static inline void UpdateVolume(double qty, MarketData::Trade* t) {$/;"	f	namespace:opentrade
+User	account1.h	/^struct User : public AccountBase {$/;"	s	namespace:opentrade
+UserSubAccountMap	account1.h	/^struct UserSubAccountMap {$/;"	s	namespace:opentrade
+Value	algo.h	/^      Value;$/;"	t	struct:opentrade::ParamDef
+ValueScalar	algo.h	/^      ValueScalar;$/;"	t	struct:opentrade::ParamDef
+ValueVector	algo.h	/^  typedef std::vector<ValueScalar> ValueVector;$/;"	t	struct:opentrade::ParamDef
+WsConnPtr	server.cc	/^typedef std::shared_ptr<WsServer::Connection> WsConnPtr;$/;"	t	namespace:opentrade	file:
+WsSocketWrapper	server.cc	/^  explicit WsSocketWrapper(WsConnPtr ws) : ws_(ws) {}$/;"	f	struct:opentrade::WsSocketWrapper
+WsSocketWrapper	server.cc	/^struct WsSocketWrapper : public Transport {$/;"	s	namespace:opentrade	file:
+_XQUANT_ACCOUNT_H	account.h	14;"	d
+_XQUANT_COMMON_H	common.h	14;"	d
+active_orders	algo.h	/^  const Orders& active_orders() const { return active_orders_; }$/;"	f	class:opentrade::Instrument
+active_orders_	algo.h	/^  Orders active_orders_;$/;"	m	class:opentrade::Instrument
+adapter	account1.h	/^  ExchangeConnectivityAdapter* adapter = nullptr;$/;"	m	struct:opentrade::BrokerAccount
+adapter_name	account1.h	/^  const char* adapter_name = "";$/;"	m	struct:opentrade::BrokerAccount
+adapters	adapter.h	/^  const AdapterMap& adapters() { return adapters_; }$/;"	f	class:opentrade::AdapterManager
+adapters_	adapter.h	/^  AdapterMap adapters_;$/;"	m	class:opentrade::AdapterManager
+adv20	security.h	/^  double adv20 = 0;$/;"	m	struct:opentrade::Security
+algo	algo.h	/^  Algo& algo() { return *algo_; }$/;"	f	class:opentrade::Instrument
+algo_	algo.h	/^  Algo* algo_ = nullptr;$/;"	m	class:opentrade::Instrument
+algo_id	order.h	/^  uint32_t algo_id = 0;$/;"	m	struct:opentrade::Order
+algo_id_counter_	algo.h	/^  std::atomic<Algo::IdType> algo_id_counter_ = 0;$/;"	m	class:opentrade::AlgoManager
+algo_methods	python.cc	/^namespace algo_methods {$/;"	n	namespace:opentrade	file:
+algo_of_token_	algo.h	/^  tbb::concurrent_unordered_map<std::string, Algo*> algo_of_token_;$/;"	m	class:opentrade::AlgoManager
+algos_	algo.h	/^  tbb::concurrent_unordered_map<Algo::IdType, Algo*> algos_;$/;"	m	class:opentrade::AlgoManager
+ask_price	market_data.h	/^    double ask_price = 0;$/;"	m	struct:opentrade::MarketData::Quote
+ask_price	python.cc	/^static PyObject *ask_price(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+ask_price_def	python.cc	/^static PyMethodDef ask_price_def = {"get_ask_price", ask_price, METH_VARARGS,$/;"	m	namespace:opentrade::md_methods	file:
+ask_size	market_data.h	/^    double ask_size = 0;$/;"	m	struct:opentrade::MarketData::Quote
+ask_size	python.cc	/^static PyObject *ask_size(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+ask_size_def	python.cc	/^static PyMethodDef ask_size_def = {"get_ask_size", ask_size, METH_VARARGS,$/;"	m	namespace:opentrade::md_methods	file:
+avg_price	position.h	/^  double avg_price = 0;$/;"	m	struct:opentrade::Bod
+avg_price	position.h	/^  double avg_price = 0;$/;"	m	struct:opentrade::Position
+avg_px	order.h	/^  double avg_px = 0;$/;"	m	struct:opentrade::Order
+avg_px	python.cc	/^static PyObject *avg_px(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::order_methods
+avg_px_def	python.cc	/^static PyMethodDef avg_px_def = {"get_avg_px", avg_px, METH_VARARGS,$/;"	m	namespace:opentrade::order_methods	file:
+bb_name	security.h	/^  const char* bb_name = "";$/;"	m	struct:opentrade::Exchange
+bbgid	security.h	/^  const char* bbgid = "";$/;"	m	struct:opentrade::Security
+bid_price	market_data.h	/^    double bid_price = 0;$/;"	m	struct:opentrade::MarketData::Quote
+bid_price	python.cc	/^static PyObject *bid_price(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+bid_price_def	python.cc	/^static PyMethodDef bid_price_def = {"get_bid_price", bid_price, METH_VARARGS,$/;"	m	namespace:opentrade::md_methods	file:
+bid_size	market_data.h	/^    double bid_size = 0;$/;"	m	struct:opentrade::MarketData::Quote
+bid_size	python.cc	/^static PyObject *bid_size(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+bid_size_def	python.cc	/^static PyMethodDef bid_size_def = {"get_bid_size", bid_size, METH_VARARGS,$/;"	m	namespace:opentrade::md_methods	file:
+bods_	position.h	/^      bods_;$/;"	m	class:opentrade::PositionManager
+bought_qty	algo.h	/^  double bought_qty() const { return bought_qty_; }$/;"	f	class:opentrade::Instrument
+bought_qty	python.cc	/^static PyObject *bought_qty(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+bought_qty_	algo.h	/^  double bought_qty_ = 0;$/;"	m	class:opentrade::Instrument
+bought_qty_def	python.cc	/^static PyMethodDef bought_qty_def = {"get_bought", bought_qty, METH_VARARGS,$/;"	m	namespace:opentrade::instrument_methods	file:
+break_end	security.h	/^  int break_end = 0;$/;"	m	struct:opentrade::Exchange
+break_start	security.h	/^  int break_start = 0;$/;"	m	struct:opentrade::Exchange
+broker_account	order.h	/^  const BrokerAccount* broker_account = nullptr;$/;"	m	struct:opentrade::Order
+broker_account_id	account1.h	/^  BrokerAccount::IdType broker_account_id = 0;$/;"	m	struct:opentrade::SubAccountBrokerAccountMap
+broker_account_id	position.h	/^  BrokerAccount::IdType broker_account_id = 0;$/;"	m	struct:opentrade::Bod
+broker_accounts	account1.h	/^  const BrokerAccountMap* broker_accounts = new BrokerAccountMap();$/;"	m	struct:opentrade::SubAccount
+broker_accounts_	account1.h	/^      broker_accounts_;$/;"	m	class:opentrade::AccountManager
+broker_positions_	position.h	/^      broker_positions_;$/;"	m	class:opentrade::PositionManager
+buf_	database.cc	/^  char buf_[256];$/;"	m	class:opentrade::SqlLog	file:
+cancel	python.cc	/^static PyObject *cancel(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::order_methods
+cancel_def	python.cc	/^static PyMethodDef cancel_def = {"cancel", cancel, METH_VARARGS, "cancel()"};$/;"	m	namespace:opentrade::order_methods	file:
+check_sum	security.h	/^  const char* check_sum() const { return check_sum_; }$/;"	f	class:opentrade::SecurityManager
+check_sum_	security.h	/^  const char* check_sum_ = "";$/;"	m	class:opentrade::SecurityManager
+close	market_data.h	/^    double close = 0;$/;"	m	struct:opentrade::MarketData::Trade
+close	python.cc	/^static PyObject *close(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+close	server.cc	/^void close(WsConnPtr connection) {$/;"	f	namespace:opentrade
+close_def	python.cc	/^static PyMethodDef close_def = {"get_close", close, METH_VARARGS,$/;"	m	namespace:opentrade::md_methods	file:
+close_price	security.h	/^  double close_price = 0;$/;"	m	struct:opentrade::Security
+closed_	connection.h	/^  bool closed_ = false;$/;"	m	class:opentrade::Connection
+config	adapter.h	/^  const StrMap& config() const { return config_; }$/;"	f	class:opentrade::Adapter
+config	adapter.h	/^  std::string config(const std::string& name) const {$/;"	f	class:opentrade::Adapter
+config_	adapter.h	/^  StrMap config_;$/;"	m	class:opentrade::Adapter
+config_file	logger.h	/^  inline static std::string config_file;$/;"	m	class:opentrade::Logger
+connected_	adapter.h	/^  std::atomic<int> connected_ = 0;$/;"	m	class:opentrade::NetworkAdapter
+country	security.h	/^  const char* country = "";$/;"	m	struct:opentrade::Exchange
+create_func_	adapter.h	/^  Func create_func_;$/;"	m	class:opentrade::Adapter
+create_tables_sql	database.cc	/^static const char create_tables_sql[] = R"($/;"	m	namespace:opentrade	file:
+cum_qty	order.h	/^  double cum_qty = 0;$/;"	m	struct:opentrade::Order
+cum_qty	python.cc	/^static PyObject *cum_qty(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::order_methods
+cum_qty_def	python.cc	/^static PyMethodDef cum_qty_def = {"get_cum_qty", cum_qty, METH_VARARGS,$/;"	m	namespace:opentrade::order_methods	file:
+currency	security.h	/^  const char* currency = "";$/;"	m	struct:opentrade::Security
+cusip	security.h	/^  const char* cusip = "";$/;"	m	struct:opentrade::Security
+def_	python.h	/^  ParamDefs def_;$/;"	m	class:opentrade::Python
+default_	market_data.h	/^  MarketDataAdapter* default_;$/;"	m	class:opentrade::MarketDataManager
+default_value	algo.h	/^  Value default_value;$/;"	m	struct:opentrade::ParamDef
+depth	market_data.h	/^  Depth depth;$/;"	m	struct:opentrade::MarketData
+desc	security.h	/^  const char* desc = "";$/;"	m	struct:opentrade::Exchange
+dirties_	algo.h	/^  boost::unordered_set<std::pair<DataSrc::IdType, Security::IdType>> dirties_;$/;"	m	class:opentrade::AlgoRunner
+ecs_	connection.h	/^  std::map<std::string, bool> ecs_;$/;"	m	class:opentrade::Connection
+exchange	security.h	/^  const Exchange* exchange = nullptr;$/;"	m	struct:opentrade::Security
+exchange_id	account1.h	/^  Exchange::IdType exchange_id = 0;$/;"	m	struct:opentrade::SubAccountBrokerAccountMap
+exchange_of_name_	security.h	/^  tbb::concurrent_unordered_map<std::string, Exchange*> exchange_of_name_;$/;"	m	class:opentrade::SecurityManager
+exchanges_	security.h	/^  tbb::concurrent_unordered_map<Exchange::IdType, Exchange*> exchanges_;$/;"	m	class:opentrade::SecurityManager
+exec_id	order.h	/^  std::string exec_id;$/;"	m	struct:opentrade::Confirmation
+exec_ids_	order.h	/^      exec_ids_;$/;"	m	class:opentrade::GlobalOrderBook
+exec_trans_type	order.h	/^  ExecTransType exec_trans_type = kTransNew;$/;"	m	struct:opentrade::Confirmation
+exec_type	order.h	/^  OrderStatus exec_type = kUnconfirmedNew;$/;"	m	struct:opentrade::Confirmation
+get_active_orders	python.cc	/^static PyObject *get_active_orders(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+get_active_orders_def	python.cc	/^static PyMethodDef get_active_orders_def = {"get_active_orders",$/;"	m	namespace:opentrade::instrument_methods	file:
+get_lot_size	python.cc	/^static PyObject *get_lot_size(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::security_methods
+get_lot_size_def	python.cc	/^static PyMethodDef get_lot_size_def = {"get_lot_size", get_lot_size,$/;"	m	namespace:opentrade::security_methods	file:
+get_param_defs	python.h	/^  PyObject* get_param_defs = nullptr;$/;"	m	struct:opentrade::PyModule
+get_tick_size	python.cc	/^static PyObject *get_tick_size(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::security_methods
+get_tick_size_def	python.cc	/^static PyMethodDef get_tick_size_def = {"get_tick_size", get_tick_size,$/;"	m	namespace:opentrade::security_methods	file:
+high	market_data.h	/^    double high = 0;$/;"	m	struct:opentrade::MarketData::Trade
+high	python.cc	/^static PyObject *high(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+high_def	python.cc	/^static PyMethodDef high_def = {"get_high", high, METH_VARARGS, "get_high()"};$/;"	m	namespace:opentrade::md_methods	file:
+ib_name	security.h	/^  const char* ib_name = "";$/;"	m	struct:opentrade::Exchange
+id	account1.h	/^  IdType id = 0;$/;"	m	struct:opentrade::BrokerAccount
+id	account1.h	/^  IdType id = 0;$/;"	m	struct:opentrade::SubAccount
+id	account1.h	/^  IdType id = 0;$/;"	m	struct:opentrade::User
+id	algo.h	/^  IdType id() const { return id_; }$/;"	f	class:opentrade::Algo
+id	order.h	/^  IdType id = 0;$/;"	m	struct:opentrade::Order
+id	security.h	/^  IdType id = 0;$/;"	m	struct:opentrade::Exchange
+id	security.h	/^  IdType id = 0;$/;"	m	struct:opentrade::Security
+id_	algo.h	/^  IdType id_ = 0;$/;"	m	class:opentrade::Algo
+industry	security.h	/^  int industry = 0;$/;"	m	struct:opentrade::Security
+industry_group	security.h	/^  int industry_group = 0;$/;"	m	struct:opentrade::Security
+inst	order.h	/^  const Instrument* inst = nullptr;$/;"	m	struct:opentrade::Order
+instrument_methods	python.cc	/^namespace instrument_methods {$/;"	n	namespace:opentrade	file:
+instruments_	algo.h	/^      instruments_;$/;"	m	class:opentrade::AlgoRunner
+instruments_	algo.h	/^  std::set<Instrument*> instruments_;$/;"	m	class:opentrade::Algo
+io_service_	algo.h	/^  boost::asio::io_service io_service_;$/;"	m	class:opentrade::AlgoManager
+is_active	algo.h	/^  bool is_active() const { return is_active_; }$/;"	f	class:opentrade::Algo
+is_active	python.cc	/^static PyObject *is_active(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::algo_methods
+is_active_	algo.h	/^  bool is_active_ = true;$/;"	m	class:opentrade::Algo
+is_active_def	python.cc	/^static PyMethodDef is_active_def = {"is_active", is_active, METH_VARARGS,$/;"	m	namespace:opentrade::algo_methods	file:
+is_admin	account1.h	/^  bool is_admin = false;$/;"	m	struct:opentrade::User
+is_disabled	account1.h	/^  bool is_disabled = false;$/;"	m	struct:opentrade::User
+is_in_trade_period	python.cc	/^static PyObject *is_in_trade_period(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::security_methods
+is_in_trade_period_def	python.cc	/^static PyMethodDef is_in_trade_period_def = {"is_in_trade_period",$/;"	m	namespace:opentrade::security_methods	file:
+is_live	python.cc	/^static PyObject *is_live(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::order_methods
+is_live_def	python.cc	/^static PyMethodDef is_live_def = {"is_live", is_live, METH_VARARGS,$/;"	m	namespace:opentrade::order_methods	file:
+isin	security.h	/^  const char* isin = "";$/;"	m	struct:opentrade::Security
+kApiVersion	adapter.h	/^static const int kApiVersion = 1;$/;"	m	namespace:opentrade
+kBond	security.h	/^inline static const std::string kBond = "BOND";$/;"	m	namespace:opentrade
+kCombo	security.h	/^inline static const std::string kCombo = "BAG";$/;"	m	namespace:opentrade
+kCommodity	security.h	/^inline static const std::string kCommodity = "CMDTY";$/;"	m	namespace:opentrade
+kConstants	python.cc	/^static PyObject *kConstants;$/;"	m	namespace:opentrade	file:
+kCreateObjectPyFunc	python.cc	/^static PyObject *kCreateObjectPyFunc;$/;"	m	namespace:opentrade	file:
+kDatabaseTaskPool	position.cc	/^static TaskPool kDatabaseTaskPool;$/;"	m	namespace:opentrade	file:
+kDefaultLogConf	logger.h	/^inline const char* kDefaultLogConf = R"($/;"	m	namespace:opentrade
+kDepthSize	market_data.h	/^  static inline const size_t kDepthSize = 5;$/;"	m	struct:opentrade::MarketData
+kEmptyStr	common.h	/^static inline const std::string kEmptyStr;$/;"	m	namespace:xquant
+kEmptyStr	common1.h	/^static inline const std::string kEmptyStr;$/;"	m	namespace:opentrade
+kError	algo.cc	/^static thread_local std::string kError;$/;"	m	namespace:opentrade	file:
+kForexPair	security.h	/^inline static const std::string kForexPair = "CASH";$/;"	m	namespace:opentrade
+kFuture	security.h	/^inline static const std::string kFuture = "FUT";$/;"	m	namespace:opentrade
+kFutureOption	security.h	/^inline static const std::string kFutureOption = "FOP";$/;"	m	namespace:opentrade
+kHttpServer	server.cc	/^static HttpServer kHttpServer;$/;"	m	namespace:opentrade	file:
+kIndex	security.h	/^inline static const std::string kIndex = "IND";$/;"	m	namespace:opentrade
+kIoService	server.cc	/^static auto kIoService = std::make_shared<boost::asio::io_service>();$/;"	m	namespace:opentrade	file:
+kMutex	server.cc	/^static std::mutex kMutex;$/;"	m	namespace:opentrade	file:
+kOption	security.h	/^inline static const std::string kOption = "OPT";$/;"	m	namespace:opentrade
+kPath	algo.cc	/^static auto kPath = fs::path(".") \/ "store" \/ "algos";$/;"	m	namespace:opentrade	file:
+kPath	order.cc	/^static auto kPath = fs::path(".") \/ "store" \/ "confirmations";$/;"	m	namespace:opentrade	file:
+kRawPy	python.cc	/^static const char *kRawPy = R"(# do not modify me$/;"	m	namespace:opentrade	file:
+kRiskError	risk.h	/^inline thread_local std::string kRiskError;$/;"	m	namespace:opentrade
+kSecondsOneDay	utility.h	/^static const int kSecondsOneDay = 3600 * 24;$/;"	m	namespace:opentrade
+kSecurityTuple	python.cc	/^static PyObject *kSecurityTuple;$/;"	m	namespace:opentrade	file:
+kSharedTaskPool	common1.h	/^inline TaskPool kSharedTaskPool;$/;"	m	namespace:opentrade
+kSocketMap	server.cc	/^static std::unordered_map<WsConnPtr, Connection::Ptr> kSocketMap;$/;"	m	namespace:opentrade	file:
+kStartTime	connection.cc	/^static time_t kStartTime = time(nullptr);$/;"	m	namespace:opentrade	file:
+kStock	security.h	/^inline static const std::string kStock = "STK";$/;"	m	namespace:opentrade
+kWarrant	security.h	/^inline static const std::string kWarrant = "WAR";$/;"	m	namespace:opentrade
+kWriteTaskPool	common1.h	/^inline TaskPool kWriteTaskPool;$/;"	m	namespace:opentrade
+kWsServer	server.cc	/^static WsServer kWsServer;$/;"	m	namespace:opentrade	file:
+last_px	order.h	/^  double last_px = 0;$/;"	m	struct:opentrade::Confirmation
+last_shares	order.h	/^    double last_shares = 0;$/;"	m	union:opentrade::Confirmation::__anon1
+leaves_qty	order.h	/^    double leaves_qty;$/;"	m	union:opentrade::Confirmation::__anon1
+leaves_qty	order.h	/^  double leaves_qty = 0;$/;"	m	struct:opentrade::Order
+limits	account1.h	/^  Limits limits;$/;"	m	struct:opentrade::AccountBase
+local_symbol	security.h	/^  const char* local_symbol = "";$/;"	m	struct:opentrade::Security
+log_debug	python.cc	/^static PyObject *log_debug(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::algo_methods
+log_debug_def	python.cc	/^static PyMethodDef log_debug_def = {"log_debug", log_debug, METH_VARARGS,$/;"	m	namespace:opentrade::algo_methods	file:
+log_error	python.cc	/^static PyObject *log_error(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::algo_methods
+log_error_def	python.cc	/^static PyMethodDef log_error_def = {"log_error", log_error, METH_VARARGS,$/;"	m	namespace:opentrade::algo_methods	file:
+log_info	python.cc	/^static PyObject *log_info(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::algo_methods
+log_info_def	python.cc	/^static PyMethodDef log_info_def = {"log_info", log_info, METH_VARARGS,$/;"	m	namespace:opentrade::algo_methods	file:
+log_warn	python.cc	/^static PyObject *log_warn(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::algo_methods
+log_warn_def	python.cc	/^static PyMethodDef log_warn_def = {"log_warn", log_warn, METH_VARARGS,$/;"	m	namespace:opentrade::algo_methods	file:
+logger	logger.h	/^  inline static auto logger = log4cxx::Logger::getRootLogger();$/;"	m	class:opentrade::Logger
+logger_	database.cc	/^  log4cxx::LoggerPtr logger_ = opentrade::Logger::Get("sql");$/;"	m	class:opentrade::SqlLog	file:
+lot_size	security.h	/^  int lot_size = 0;$/;"	m	struct:opentrade::Security
+low	market_data.h	/^    double low = 0;$/;"	m	struct:opentrade::MarketData::Trade
+low	python.cc	/^static PyObject *low(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+low_def	python.cc	/^static PyMethodDef low_def = {"get_low", low, METH_VARARGS, "get_low()"};$/;"	m	namespace:opentrade::md_methods	file:
+lower_bound	security.h	/^    double lower_bound = 0;$/;"	m	struct:opentrade::Exchange::TickSizeTuple
+m	python.cc	/^  std::mutex m;$/;"	m	struct:opentrade::LockGIL	file:
+main	main.cc	/^int main(int argc, char *argv[]) {$/;"	f
+market_cap	security.h	/^  double market_cap = 0;$/;"	m	struct:opentrade::Security
+maturity_date	security.h	/^  int maturity_date = 0;$/;"	m	struct:opentrade::Security
+max_value	algo.h	/^  double max_value = 0;$/;"	m	struct:opentrade::ParamDef
+md	algo.h	/^  const MarketData& md() const { return *md_; }$/;"	f	class:opentrade::Instrument
+md_	algo.h	/^  const MarketData* md_ = nullptr;$/;"	m	class:opentrade::Instrument
+md_	market_data.h	/^  MarketDataMap* md_;$/;"	m	class:opentrade::MarketDataAdapter
+md_methods	python.cc	/^namespace md_methods {$/;"	n	namespace:opentrade	file:
+md_of_src_	market_data.h	/^  std::map<DataSrc::IdType, MarketDataAdapter::MarketDataMap> md_of_src_;$/;"	m	class:opentrade::MarketDataManager
+md_refs_	algo.h	/^      md_refs_;$/;"	m	class:opentrade::AlgoManager
+md_refs_	algo.h	/^      md_refs_;$/;"	m	class:opentrade::AlgoRunner
+mds_	connection.h	/^  std::map<std::string, bool> mds_;$/;"	m	class:opentrade::Connection
+mic	security.h	/^  const char* mic = "";$/;"	m	struct:opentrade::Exchange
+min_value	algo.h	/^  double min_value = 0;$/;"	m	struct:opentrade::ParamDef
+msg_rate	common.h	/^  double msg_rate = 0;               \/\/ per second$/;"	m	struct:xquant::Limits
+msg_rate	common1.h	/^  double msg_rate = 0;               \/\/ per second$/;"	m	struct:opentrade::Limits
+msg_rate_per_security	common.h	/^  double msg_rate_per_security = 0;  \/\/ per security per second$/;"	m	struct:xquant::Limits
+msg_rate_per_security	common1.h	/^  double msg_rate_per_security = 0;  \/\/ per security per second$/;"	m	struct:opentrade::Limits
+multiplier	security.h	/^  double multiplier = 1;$/;"	m	struct:opentrade::Security
+mutex_	algo.h	/^  std::mutex mutex_;$/;"	m	class:opentrade::AlgoRunner
+n	common.h	/^  tbb::atomic<int> n = 0;$/;"	m	struct:xquant::Throttle
+n	common1.h	/^  tbb::atomic<int> n = 0;$/;"	m	struct:opentrade::Throttle
+name	account1.h	/^  const char* name = "";$/;"	m	struct:opentrade::BrokerAccount
+name	account1.h	/^  const char* name = "";$/;"	m	struct:opentrade::SubAccount
+name	account1.h	/^  const char* name = "";$/;"	m	struct:opentrade::User
+name	adapter.h	/^  const std::string& name() const { return name_; }$/;"	f	class:opentrade::Adapter
+name	algo.h	/^  std::string name;$/;"	m	struct:opentrade::ParamDef
+name	security.h	/^  const char* name = "";$/;"	m	struct:opentrade::Exchange
+name_	adapter.h	/^  std::string name_;$/;"	m	class:opentrade::Adapter
+net_outstanding_qty	algo.h	/^  double net_outstanding_qty() const {$/;"	f	class:opentrade::Instrument
+net_qty	algo.h	/^  double net_qty() const { return bought_qty_ - sold_qty_; }$/;"	f	class:opentrade::Instrument
+noexcept	adapter.h	/^  virtual void Start() noexcept = 0;$/;"	m	class:opentrade::Adapter
+noexcept	algo.h	/^                             const MarketData& md0) noexcept = 0;$/;"	m	class:opentrade::Algo
+noexcept	algo.h	/^  virtual const ParamDefs& GetParamDefs() noexcept = 0;$/;"	m	class:opentrade::Algo
+noexcept	algo.h	/^  virtual std::string OnStart(const ParamMap& params) noexcept = 0;$/;"	m	class:opentrade::Algo
+noexcept	algo.h	/^  virtual void OnConfirmation(const Confirmation& cm) noexcept = 0;$/;"	m	class:opentrade::Algo
+noexcept	algo.h	/^  virtual void OnStop() noexcept = 0;$/;"	m	class:opentrade::Algo
+noexcept	exchange_connectivity.h	/^  virtual std::string Cancel(const Order& ord) noexcept = 0;$/;"	m	class:opentrade::ExchangeConnectivityAdapter
+noexcept	exchange_connectivity.h	/^  virtual std::string Place(const Order& ord) noexcept = 0;$/;"	m	class:opentrade::ExchangeConnectivityAdapter
+noexcept	market_data.h	/^  virtual void Subscribe(const Security& sec) noexcept = 0;$/;"	m	class:opentrade::MarketDataAdapter
+obj_	python.h	/^  PyObject* obj_ = nullptr;$/;"	m	class:opentrade::Python
+objs_	python.h	/^  std::map<const void*, PyObject*> objs_;$/;"	m	class:opentrade::Python
+odd_lot_allowed	security.h	/^  bool odd_lot_allowed = false;$/;"	m	struct:opentrade::Exchange
+of	position.h	/^    std::ofstream* of = nullptr;$/;"	m	struct:opentrade::PositionManager::Pnl
+of_	algo.h	/^  std::ofstream of_;$/;"	m	class:opentrade::AlgoManager
+of_	order.h	/^  std::ofstream of_;$/;"	m	class:opentrade::GlobalOrderBook
+offset_	database.cc	/^  uint32_t offset_ = 0u;$/;"	m	class:opentrade::SqlLog	file:
+on_confirmation	python.h	/^  PyObject* on_confirmation = nullptr;$/;"	m	struct:opentrade::PyModule
+on_market_quote	python.h	/^  PyObject* on_market_quote = nullptr;$/;"	m	struct:opentrade::PyModule
+on_market_trade	python.h	/^  PyObject* on_market_trade = nullptr;$/;"	m	struct:opentrade::PyModule
+on_start	python.h	/^  PyObject* on_start = nullptr;$/;"	m	struct:opentrade::PyModule
+on_stop	python.h	/^  PyObject* on_stop = nullptr;$/;"	m	struct:opentrade::PyModule
+open	market_data.h	/^    double open = 0;$/;"	m	struct:opentrade::MarketData::Trade
+open	python.cc	/^static PyObject *open(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+open_def	python.cc	/^static PyMethodDef open_def = {"get_open", open, METH_VARARGS, "get_open()"};$/;"	m	namespace:opentrade::md_methods	file:
+opentrade	account.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	account1.h	/^namespace opentrade {$/;"	n
+opentrade	adapter.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	adapter.h	/^namespace opentrade {$/;"	n
+opentrade	algo.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	algo.h	/^namespace opentrade {$/;"	n
+opentrade	common1.h	/^namespace opentrade {$/;"	n
+opentrade	connection.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	connection.h	/^namespace opentrade {$/;"	n
+opentrade	database.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	database.h	/^namespace opentrade {$/;"	n
+opentrade	exchange_connectivity.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	exchange_connectivity.h	/^namespace opentrade {$/;"	n
+opentrade	logger.h	/^namespace opentrade {$/;"	n
+opentrade	market_data.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	market_data.h	/^namespace opentrade {$/;"	n
+opentrade	order.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	order.h	/^namespace opentrade {$/;"	n
+opentrade	position.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	position.h	/^namespace opentrade {$/;"	n
+opentrade	python.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	python.h	/^namespace opentrade {$/;"	n
+opentrade	risk.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	risk.h	/^namespace opentrade {$/;"	n
+opentrade	security.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	security.h	/^namespace opentrade {$/;"	n
+opentrade	server.cc	/^namespace opentrade {$/;"	n	file:
+opentrade	server.h	/^namespace opentrade {$/;"	n
+opentrade	task_pool.h	/^namespace opentrade {$/;"	n
+opentrade	utility.h	/^namespace opentrade {$/;"	n
+operator !=	market_data.h	/^    bool operator!=(const Quote& b) const {$/;"	f	struct:opentrade::MarketData::Quote
+operator !=	market_data.h	/^    bool operator!=(const Trade& b) const {$/;"	f	struct:opentrade::MarketData::Trade
+operator ()	algo.cc	/^inline void AlgoRunner::operator()() {$/;"	f	class:opentrade::AlgoRunner
+operator ()	common.h	/^  int operator()(int tm) const {$/;"	f	struct:xquant::Throttle
+operator ()	common1.h	/^  int operator()(int tm) const {$/;"	f	struct:opentrade::Throttle
+operator <	security.h	/^    bool operator<(const TickSizeTuple& b) const {$/;"	f	struct:opentrade::Exchange::TickSizeTuple
+opt_attribute	security.h	/^  char opt_attribute = 0;$/;"	m	struct:opentrade::Security
+optional_	order.h	/^      optional_ = nullptr;$/;"	m	struct:opentrade::Contract
+order	order.h	/^  Order* order = nullptr;$/;"	m	struct:opentrade::Confirmation
+order_id	order.h	/^  std::string order_id;$/;"	m	struct:opentrade::Confirmation
+order_id_counter_	order.h	/^  std::atomic<uint32_t> order_id_counter_ = 0;$/;"	m	class:opentrade::GlobalOrderBook
+order_methods	python.cc	/^namespace order_methods {$/;"	n	namespace:opentrade	file:
+order_qty	common.h	/^  double order_qty = 0;$/;"	m	struct:xquant::Limits
+order_qty	common1.h	/^  double order_qty = 0;$/;"	m	struct:opentrade::Limits
+order_value	common.h	/^  double order_value = 0;$/;"	m	struct:xquant::Limits
+order_value	common1.h	/^  double order_value = 0;$/;"	m	struct:opentrade::Limits
+orders_	order.h	/^  tbb::concurrent_unordered_map<Order::IdType, Order*> orders_;$/;"	m	class:opentrade::GlobalOrderBook
+orig_id	order.h	/^  IdType orig_id = 0;$/;"	m	struct:opentrade::Order
+outstanding_buy_qty	algo.h	/^  double outstanding_buy_qty() const { return outstanding_buy_qty_; }$/;"	f	class:opentrade::Instrument
+outstanding_buy_qty	python.cc	/^static PyObject *outstanding_buy_qty(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+outstanding_buy_qty_	algo.h	/^  double outstanding_buy_qty_ = 0;$/;"	m	class:opentrade::Instrument
+outstanding_buy_qty_def	python.cc	/^static PyMethodDef outstanding_buy_qty_def = {"get_outstanding_buy",$/;"	m	namespace:opentrade::instrument_methods	file:
+outstanding_sell_qty	algo.h	/^  double outstanding_sell_qty() const { return outstanding_sell_qty_; }$/;"	f	class:opentrade::Instrument
+outstanding_sell_qty	python.cc	/^static PyObject *outstanding_sell_qty(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+outstanding_sell_qty_	algo.h	/^  double outstanding_sell_qty_ = 0;$/;"	m	class:opentrade::Instrument
+outstanding_sell_qty_def	python.cc	/^static PyMethodDef outstanding_sell_qty_def = {$/;"	m	namespace:opentrade::instrument_methods	file:
+overflow	database.cc	/^  int overflow(int c) {$/;"	f	class:opentrade::SqlLog
+override	python.h	/^                     const MarketData& md0) noexcept override;$/;"	m	class:opentrade::Python
+override	python.h	/^  const ParamDefs& GetParamDefs() noexcept override;$/;"	m	class:opentrade::Python
+override	python.h	/^  std::string OnStart(const ParamMap& params) noexcept override;$/;"	m	class:opentrade::Python
+override	python.h	/^  void OnConfirmation(const Confirmation& cm) noexcept override;$/;"	m	class:opentrade::Python
+override	python.h	/^  void OnStop() noexcept override;$/;"	m	class:opentrade::Python
+params	account1.h	/^  const StrMap* params = new StrMap();$/;"	m	struct:opentrade::BrokerAccount
+password	account1.h	/^  const char* password = "";$/;"	m	struct:opentrade::User
+place	python.cc	/^static PyObject *place(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+place_def	python.cc	/^static PyMethodDef place_def = {$/;"	m	namespace:opentrade::instrument_methods	file:
+pnls_	connection.h	/^  std::map<SubAccount::IdType, std::pair<double, double>> pnls_;$/;"	m	class:opentrade::Connection
+pnls_	position.h	/^  tbb::concurrent_unordered_map<SubAccount::IdType, Pnl> pnls_;$/;"	m	class:opentrade::PositionManager
+pool_	database.h	/^  inline static soci::connection_pool* pool_ = nullptr;$/;"	m	class:opentrade::Database
+position_value	account1.h	/^  PositionValue position_value;$/;"	m	struct:opentrade::AccountBase
+precision	algo.h	/^  int precision = 0;$/;"	m	struct:opentrade::ParamDef
+price	order.h	/^  double price = 0;$/;"	m	struct:opentrade::Contract
+put_or_call	security.h	/^  bool put_or_call = 0;$/;"	m	struct:opentrade::Security
+py_	python.h	/^  PyModule py_;$/;"	m	class:opentrade::Python
+qty	market_data.h	/^    double qty = 0;$/;"	m	struct:opentrade::MarketData::Trade
+qty	order.h	/^  double qty = 0;$/;"	m	struct:opentrade::Contract
+qty	position.h	/^  double qty = 0;$/;"	m	struct:opentrade::Bod
+qty	position.h	/^  double qty = 0;$/;"	m	struct:opentrade::Position
+qty	python.cc	/^static PyObject *qty(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+qty_def	python.cc	/^static PyMethodDef qty_def = {"get_qty", qty, METH_VARARGS, "get_qty()"};$/;"	m	namespace:opentrade::md_methods	file:
+quote	market_data.h	/^  const Quote& quote() const { return depth[0]; }$/;"	f	struct:opentrade::MarketData
+rate	security.h	/^  double rate = 1;$/;"	m	struct:opentrade::Security
+realized	position.h	/^    double realized = 0;$/;"	m	struct:opentrade::PositionManager::Pnl
+realized_pnl	position.h	/^  double realized_pnl = 0;$/;"	m	struct:opentrade::Bod
+realized_pnl	position.h	/^  double realized_pnl = 0;$/;"	m	struct:opentrade::Position
+required	algo.h	/^  bool required = false;$/;"	m	struct:opentrade::ParamDef
+routes_	market_data.h	/^      routes_;$/;"	m	class:opentrade::MarketDataManager
+runners_	algo.h	/^  AlgoRunner* runners_ = nullptr;$/;"	m	class:opentrade::AlgoManager
+sec	algo.h	/^  const Security& sec() const { return sec_; }$/;"	f	class:opentrade::Instrument
+sec	order.h	/^  const Security* sec = nullptr;$/;"	m	struct:opentrade::Contract
+sec_	algo.h	/^  const Security& sec_;$/;"	m	class:opentrade::Instrument
+sector	security.h	/^  int sector = 0;$/;"	m	struct:opentrade::Security
+securities	security.h	/^  const SecurityMap& securities() const { return securities_; }$/;"	f	class:opentrade::SecurityManager
+securities_	security.h	/^  SecurityMap securities_;$/;"	m	class:opentrade::SecurityManager
+security_methods	python.cc	/^namespace security_methods {$/;"	n	namespace:opentrade	file:
+sedol	security.h	/^  const char* sedol = "";$/;"	m	struct:opentrade::Security
+seq	order.h	/^  uint32_t seq = 0;$/;"	m	struct:opentrade::Confirmation
+seq_counter_	algo.h	/^  uint32_t seq_counter_ = 0;$/;"	m	class:opentrade::AlgoManager
+seq_counter_	order.h	/^  uint32_t seq_counter_ = 0;$/;"	m	class:opentrade::GlobalOrderBook
+service_	task_pool.h	/^  boost::asio::io_service service_;$/;"	m	class:opentrade::TaskPool
+session	position.h	/^  auto session() { return session_; }$/;"	f	class:opentrade::PositionManager
+session_	position.h	/^  std::string session_;$/;"	m	class:opentrade::PositionManager
+set_config	adapter.h	/^  void set_config(const StrMap& config) { config_ = config; }$/;"	f	class:opentrade::Adapter
+set_name	adapter.h	/^  void set_name(const std::string& name) { name_ = name; }$/;"	f	class:opentrade::Adapter
+set_params	account.cc	/^void BrokerAccount::set_params(const std::string& params) {$/;"	f	class:opentrade::BrokerAccount
+set_timeout	python.cc	/^static PyObject *set_timeout(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::algo_methods
+set_timeout_def	python.cc	/^static PyMethodDef set_timeout_def = {"set_timeout", set_timeout, METH_VARARGS,$/;"	m	namespace:opentrade::algo_methods	file:
+sha1	connection.cc	/^std::string sha1(const std::string& str) {$/;"	f	namespace:opentrade
+side	order.h	/^  OrderSide side = kBuy;$/;"	m	struct:opentrade::Contract
+single_pnls_	connection.h	/^      single_pnls_;$/;"	m	class:opentrade::Connection
+sold_qty	algo.h	/^  double sold_qty() const { return sold_qty_; }$/;"	f	class:opentrade::Instrument
+sold_qty	python.cc	/^static PyObject *sold_qty(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+sold_qty_	algo.h	/^  double sold_qty_ = 0;$/;"	m	class:opentrade::Instrument
+sold_qty_def	python.cc	/^static PyMethodDef sold_qty_def = {"get_sold", sold_qty, METH_VARARGS,$/;"	m	namespace:opentrade::instrument_methods	file:
+sql_	position.h	/^  std::unique_ptr<soci::session> sql_;$/;"	m	class:opentrade::PositionManager
+src	algo.h	/^  DataSrc::IdType src() const { return src_; }$/;"	f	class:opentrade::Instrument
+src	market_data.h	/^  DataSrc::IdType src() const { return src_; }$/;"	f	class:opentrade::MarketDataAdapter
+src_	algo.h	/^  const DataSrc::IdType src_;$/;"	m	class:opentrade::Instrument
+src_	market_data.h	/^  DataSrc::IdType src_ = 0;$/;"	m	class:opentrade::MarketDataAdapter
+status	order.h	/^  OrderStatus status = kUnconfirmedNew;$/;"	m	struct:opentrade::Order
+status	python.cc	/^static PyObject *status(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::order_methods
+status_def	python.cc	/^static PyMethodDef status_def = {"get_status", status, METH_VARARGS,$/;"	m	namespace:opentrade::order_methods	file:
+stop	python.cc	/^static PyObject *stop(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::algo_methods
+stop_def	python.cc	/^static PyMethodDef stop_def = {"stop", stop, METH_VARARGS, "stop()"};$/;"	m	namespace:opentrade::algo_methods	file:
+stop_price	order.h	/^  double stop_price = 0;$/;"	m	struct:opentrade::Contract
+strand_	connection.h	/^  boost::asio::strand strand_;$/;"	m	class:opentrade::Connection
+strands_	algo.h	/^  std::vector<boost::asio::strand> strands_;$/;"	m	class:opentrade::AlgoManager
+strike_price	security.h	/^  double strike_price = 0;$/;"	m	struct:opentrade::Security
+sub_account	order.h	/^  const SubAccount* sub_account = nullptr;$/;"	m	struct:opentrade::Contract
+sub_account_id	account1.h	/^  SubAccount::IdType sub_account_id = 0;$/;"	m	struct:opentrade::SubAccountBrokerAccountMap
+sub_account_id	account1.h	/^  SubAccount::IdType sub_account_id = 0;$/;"	m	struct:opentrade::UserSubAccountMap
+sub_account_of_name_	account1.h	/^  tbb::concurrent_unordered_map<std::string, SubAccount*> sub_account_of_name_;$/;"	m	class:opentrade::AccountManager
+sub_accounts	account1.h	/^  const SubAccountMap* sub_accounts = new SubAccountMap();$/;"	m	struct:opentrade::User
+sub_accounts_	account1.h	/^  tbb::concurrent_unordered_map<SubAccount::IdType, SubAccount*> sub_accounts_;$/;"	m	class:opentrade::AccountManager
+sub_industry	security.h	/^  int sub_industry = 0;$/;"	m	struct:opentrade::Security
+sub_pnl_	connection.h	/^  bool sub_pnl_ = false;$/;"	m	class:opentrade::Connection
+sub_positions_	position.h	/^      sub_positions_;$/;"	m	class:opentrade::PositionManager
+subs_	connection.h	/^  std::unordered_map<Security::IdType, std::pair<MarketData, uint32_t>> subs_;$/;"	m	class:opentrade::Connection
+subscribe	python.cc	/^static PyObject *subscribe(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::algo_methods
+subscribe_def	python.cc	/^static PyMethodDef subscribe_def = {"subscribe", subscribe, METH_VARARGS,$/;"	m	namespace:opentrade::algo_methods	file:
+symbol	security.h	/^  const char* symbol = "";$/;"	m	struct:opentrade::Security
+text	order.h	/^  std::string text;$/;"	m	struct:opentrade::Confirmation
+threads_	algo.h	/^  std::vector<std::thread> threads_;$/;"	m	class:opentrade::AlgoManager
+threads_	task_pool.h	/^  std::vector<std::thread> threads_;$/;"	m	class:opentrade::TaskPool
+throttle_in_sec	account1.h	/^  Throttle throttle_in_sec;$/;"	m	struct:opentrade::AccountBase
+throttle_per_security_in_sec	account1.h	/^      throttle_per_security_in_sec;$/;"	m	struct:opentrade::AccountBase
+tick_size	security.h	/^  double tick_size = 0;$/;"	m	struct:opentrade::Security
+tick_size_table	security.h	/^  const TickSizeTable* tick_size_table = nullptr;$/;"	m	struct:opentrade::Exchange
+tid_	algo.h	/^  std::thread::id tid_;$/;"	m	class:opentrade::AlgoRunner
+tif	order.h	/^  TimeInForce tif = kDay;$/;"	m	struct:opentrade::Contract
+timer_	connection.h	/^  boost::asio::deadline_timer timer_;$/;"	m	class:opentrade::Connection
+tm	common.h	/^  int tm = 0;$/;"	m	struct:xquant::Throttle
+tm	common1.h	/^  int tm = 0;$/;"	m	struct:opentrade::Throttle
+tm	market_data.h	/^  time_t tm = 0;$/;"	m	struct:opentrade::MarketData
+tm	order.h	/^  int64_t tm = 0;$/;"	m	struct:opentrade::Order
+tm	position.h	/^  time_t tm = 0;$/;"	m	struct:opentrade::Bod
+token	algo.h	/^  const std::string& token() const { return token_; }$/;"	f	class:opentrade::Algo
+token_	algo.h	/^  std::string token_;$/;"	m	class:opentrade::Algo
+total_bought	common.h	/^  double total_bought = 0;$/;"	m	struct:xquant::PositionValue
+total_bought	common1.h	/^  double total_bought = 0;$/;"	m	struct:opentrade::PositionValue
+total_bought_qty	position.h	/^  double total_bought_qty = 0;$/;"	m	struct:opentrade::Position
+total_exposure	algo.h	/^  double total_exposure() const {$/;"	f	class:opentrade::Instrument
+total_exposure	python.cc	/^static PyObject *total_exposure(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+total_exposure_def	python.cc	/^static PyMethodDef total_exposure_def = {"get_total_exposure", total_exposure,$/;"	m	namespace:opentrade::instrument_methods	file:
+total_outstanding_buy	common.h	/^  double total_outstanding_buy = 0;$/;"	m	struct:xquant::PositionValue
+total_outstanding_buy	common1.h	/^  double total_outstanding_buy = 0;$/;"	m	struct:opentrade::PositionValue
+total_outstanding_buy_qty	position.h	/^  double total_outstanding_buy_qty = 0;$/;"	m	struct:opentrade::Position
+total_outstanding_qty	algo.h	/^  double total_outstanding_qty() const {$/;"	f	class:opentrade::Instrument
+total_outstanding_qty	python.cc	/^static PyObject *total_outstanding_qty(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+total_outstanding_qty_def	python.cc	/^static PyMethodDef total_outstanding_qty_def = {$/;"	m	namespace:opentrade::instrument_methods	file:
+total_outstanding_sell	common.h	/^  double total_outstanding_sell = 0;$/;"	m	struct:xquant::PositionValue
+total_outstanding_sell	common1.h	/^  double total_outstanding_sell = 0;$/;"	m	struct:opentrade::PositionValue
+total_outstanding_sell_qty	position.h	/^  double total_outstanding_sell_qty = 0;$/;"	m	struct:opentrade::Position
+total_qty	algo.h	/^  double total_qty() const { return bought_qty_ + sold_qty_; }$/;"	f	class:opentrade::Instrument
+total_qty	python.cc	/^static PyObject *total_qty(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::instrument_methods
+total_qty_def	python.cc	/^static PyMethodDef total_qty_def = {"get_total_qty", total_qty, METH_VARARGS,$/;"	m	namespace:opentrade::instrument_methods	file:
+total_sold	common.h	/^  double total_sold = 0;$/;"	m	struct:xquant::PositionValue
+total_sold	common1.h	/^  double total_sold = 0;$/;"	m	struct:opentrade::PositionValue
+total_sold_qty	position.h	/^  double total_sold_qty = 0;$/;"	m	struct:opentrade::Position
+total_turnover	common.h	/^  double total_turnover = 0;$/;"	m	struct:xquant::Limits
+total_turnover	common1.h	/^  double total_turnover = 0;$/;"	m	struct:opentrade::Limits
+total_value	common.h	/^  double total_value = 0;$/;"	m	struct:xquant::Limits
+total_value	common1.h	/^  double total_value = 0;$/;"	m	struct:opentrade::Limits
+trade	market_data.h	/^  Trade trade;$/;"	m	struct:opentrade::MarketData
+trade_end	security.h	/^  int trade_end = 0;$/;"	m	struct:opentrade::Exchange
+trade_start	security.h	/^  int trade_start = 0;  \/\/ seconds since midnight$/;"	m	struct:opentrade::Exchange
+transaction_time	order.h	/^  int64_t transaction_time = 0;  \/\/ utc in microseconds$/;"	m	struct:opentrade::Confirmation
+transport_	connection.h	/^  Transport::Ptr transport_;$/;"	m	class:opentrade::Connection
+turnover	common.h	/^  double turnover = 0;$/;"	m	struct:xquant::Limits
+turnover	common1.h	/^  double turnover = 0;$/;"	m	struct:opentrade::Limits
+type	order.h	/^  OrderType type = kLimit;$/;"	m	struct:opentrade::Contract
+type	security.h	/^  const char* type = "";$/;"	m	struct:opentrade::Security
+tz	security.h	/^  const char* tz = "";$/;"	m	struct:opentrade::Exchange
+underlying	security.h	/^  const Security* underlying = nullptr;$/;"	m	struct:opentrade::Security
+unrealized	position.h	/^    double unrealized = 0;$/;"	m	struct:opentrade::PositionManager::Pnl
+unrealized_pnl	position.h	/^  double unrealized_pnl = 0;$/;"	m	struct:opentrade::Position
+upper_bound	security.h	/^    double upper_bound = 0;$/;"	m	struct:opentrade::Exchange::TickSizeTuple
+user	algo.h	/^  const User& user() const { return *user_; }$/;"	f	class:opentrade::Algo
+user	order.h	/^  const User* user = nullptr;$/;"	m	struct:opentrade::Order
+user_	algo.h	/^  const User* user_ = nullptr;$/;"	m	class:opentrade::Algo
+user_	connection.h	/^  const User* user_ = nullptr;$/;"	m	class:opentrade::Connection
+user_id	account1.h	/^  User::IdType user_id = 0;$/;"	m	struct:opentrade::UserSubAccountMap
+user_of_name_	account1.h	/^  tbb::concurrent_unordered_map<std::string, User*> user_of_name_;$/;"	m	class:opentrade::AccountManager
+user_positions_	position.h	/^      user_positions_;$/;"	m	class:opentrade::PositionManager
+users_	account1.h	/^  tbb::concurrent_unordered_map<User::IdType, User*> users_;$/;"	m	class:opentrade::AccountManager
+utc_time_offset	security.h	/^  int utc_time_offset = 0;$/;"	m	struct:opentrade::Exchange
+value	common.h	/^  double value = 0;                  \/\/ per security$/;"	m	struct:xquant::Limits
+value	common1.h	/^  double value = 0;  \/\/ per security$/;"	m	struct:opentrade::Limits
+value	security.h	/^    double value = 0;$/;"	m	struct:opentrade::Exchange::TickSizeTuple
+volume	market_data.h	/^    double volume = 0;$/;"	m	struct:opentrade::MarketData::Trade
+volume	python.cc	/^static PyObject *volume(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+volume_def	python.cc	/^static PyMethodDef volume_def = {"get_volume", volume, METH_VARARGS,$/;"	m	namespace:opentrade::md_methods	file:
+vwap	market_data.h	/^    double vwap = 0;$/;"	m	struct:opentrade::MarketData::Trade
+vwap	python.cc	/^static PyObject *vwap(PyObject *self, PyObject *args) {$/;"	f	namespace:opentrade::md_methods
+vwap_def	python.cc	/^static PyMethodDef vwap_def = {"get_vwap", vwap, METH_VARARGS, "get_vwap()"};$/;"	m	namespace:opentrade::md_methods	file:
+work_	algo.h	/^  std::unique_ptr<boost::asio::io_service::work> work_;$/;"	m	class:opentrade::AlgoManager
+work_	task_pool.h	/^  std::unique_ptr<boost::asio::io_service::work> work_;$/;"	m	class:opentrade::TaskPool
+ws_	server.cc	/^  WsConnPtr ws_;$/;"	m	struct:opentrade::WsSocketWrapper	file:
+xquant	common.h	/^namespace xquant {$/;"	n
+~Adapter	adapter.cc	/^Adapter::~Adapter() {}$/;"	f	class:opentrade::Adapter
+~Connection	connection.cc	/^Connection::~Connection() {$/;"	f	class:opentrade::Connection
+~LockGIL	python.cc	/^  ~LockGIL() { m.unlock(); }$/;"	f	struct:opentrade::LockGIL
+~Python	python.cc	/^Python::~Python() {$/;"	f	class:opentrade::Python
+~TaskPool	task_pool.h	/^  ~TaskPool() {$/;"	f	class:opentrade::TaskPool
